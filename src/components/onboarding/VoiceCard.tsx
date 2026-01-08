@@ -9,9 +9,14 @@ const VoiceCard = ({ quote, selected, onClick, rotation = "" }: VoiceCardProps) 
   return (
     <button
       onClick={onClick}
-      className={`card-voice w-full text-left ${rotation} ${selected ? "card-voice-selected" : ""}`}
+      className={`w-full text-left rounded-2xl p-5 min-h-[100px] transition-all duration-200 ${rotation} ${
+        selected 
+          ? "bg-[#E0D6C8] border-2 border-[#C4A574]" 
+          : "bg-[#EDE6DC] border-2 border-transparent"
+      }`}
+      style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}
     >
-      <p className="text-[15px] leading-[1.5] text-foreground">
+      <p className="text-[15px] leading-[1.5]" style={{ color: '#2C2C2C' }}>
         "{quote}"
       </p>
     </button>

@@ -7,33 +7,33 @@
 @layer base {
   :root {
     /* Whisper Design System - Secret Note Theme */
-    --background: 34 33% 96%; /* #FAF6F1 warm parchment */
-    --foreground: 0 0% 10%; /* #1A1A1A */
+    --background: 36 25% 93%; /* #F5EFE7 warm cream */
+    --foreground: 0 0% 17%; /* #2C2C2C near black */
 
-    --card: 34 23% 92%; /* #F3EDE5 note paper */
-    --card-foreground: 0 0% 10%;
-    --card-selected: 34 18% 88%; /* #EBE3D8 */
+    --card: 34 18% 89%; /* #EDE6DC darker warm tan */
+    --card-foreground: 0 0% 17%; /* #2C2C2C */
+    --card-selected: 34 16% 83%; /* #E0D6C8 */
 
-    --popover: 34 33% 96%;
-    --popover-foreground: 0 0% 10%;
+    --popover: 36 25% 93%;
+    --popover-foreground: 0 0% 17%;
 
     --primary: 36 35% 61%; /* #C4A574 muted gold */
-    --primary-foreground: 0 0% 10%;
+    --primary-foreground: 0 0% 17%;
 
-    --secondary: 34 18% 88%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 34 18% 89%;
+    --secondary-foreground: 0 0% 17%;
 
-    --muted: 34 18% 88%;
+    --muted: 34 18% 89%;
     --muted-foreground: 20 8% 38%; /* #6B6159 warm gray */
 
     --accent: 36 35% 61%;
-    --accent-foreground: 0 0% 10%;
+    --accent-foreground: 0 0% 17%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 36 35% 61%;
-    --input: 34 18% 88%;
+    --input: 34 18% 89%;
     --ring: 36 35% 61%;
 
     --radius: 1rem;
@@ -41,30 +41,30 @@
     /* Custom Whisper tokens */
     --progress-track: 34 18% 88%;
     --progress-fill: 36 35% 61%;
-    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.06);
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
     --shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.08);
   }
 
   .dark {
-    --background: 34 33% 96%;
-    --foreground: 0 0% 10%;
-    --card: 34 23% 92%;
-    --card-foreground: 0 0% 10%;
-    --card-selected: 34 18% 88%;
-    --popover: 34 33% 96%;
-    --popover-foreground: 0 0% 10%;
+    --background: 36 25% 93%;
+    --foreground: 0 0% 17%;
+    --card: 34 18% 89%;
+    --card-foreground: 0 0% 17%;
+    --card-selected: 34 16% 83%;
+    --popover: 36 25% 93%;
+    --popover-foreground: 0 0% 17%;
     --primary: 36 35% 61%;
-    --primary-foreground: 0 0% 10%;
-    --secondary: 34 18% 88%;
-    --secondary-foreground: 0 0% 10%;
-    --muted: 34 18% 88%;
+    --primary-foreground: 0 0% 17%;
+    --secondary: 34 18% 89%;
+    --secondary-foreground: 0 0% 17%;
+    --muted: 34 18% 89%;
     --muted-foreground: 20 8% 38%;
     --accent: 36 35% 61%;
-    --accent-foreground: 0 0% 10%;
+    --accent-foreground: 0 0% 17%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     --border: 36 35% 61%;
-    --input: 34 18% 88%;
+    --input: 34 18% 89%;
     --ring: 36 35% 61%;
   }
 }
