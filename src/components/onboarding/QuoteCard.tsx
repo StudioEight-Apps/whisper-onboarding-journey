@@ -11,10 +11,8 @@ const QuoteCard = ({ quote, selected, onClick, rotation = "" }: QuoteCardProps) 
       onClick={onClick}
       className={`card-quote w-full ${rotation} ${selected ? "card-whisper-selected" : ""}`}
     >
-      <p className="text-whisper-lg">
-        <span className="text-primary font-serif text-2xl leading-none">"</span>
-        {quote}
-        <span className="text-primary font-serif text-2xl leading-none">"</span>
+      <p className="text-[15px] leading-[1.5] text-foreground">
+        "{quote}"
       </p>
     </button>
   );

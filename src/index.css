@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Caveat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -114,11 +114,11 @@
   }
 
   .text-whisper {
-    @apply font-handwritten text-[22px] leading-[1.4] text-foreground;
+    @apply font-sans-body text-[17px] leading-[1.5] text-foreground italic;
   }
 
   .text-whisper-lg {
-    @apply font-handwritten text-[24px] leading-[1.4] text-foreground;
+    @apply font-sans-body text-[17px] leading-[1.5] text-foreground italic;
   }
 
   .text-card {

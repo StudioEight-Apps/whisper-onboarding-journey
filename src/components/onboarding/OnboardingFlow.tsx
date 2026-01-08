@@ -6,8 +6,8 @@ import Screen3InnerDialogue from "./screens/Screen3InnerDialogue";
 import Screen4StressResponse from "./screens/Screen4StressResponse";
 import Screen5VoiceSelection from "./screens/Screen5VoiceSelection";
 import Screen6LanguageAlignment from "./screens/Screen6LanguageAlignment";
-import Screen7WidgetExplanation from "./screens/Screen7WidgetExplanation";
-import Screen8SaveVoice from "./screens/Screen8SaveVoice";
+import Screen7VoiceReveal from "./screens/Screen7VoiceReveal";
+import Screen8WidgetExplanation from "./screens/Screen8WidgetExplanation";
 import Screen9CreateAccount from "./screens/Screen9CreateAccount";
 import Screen10StartJournaling from "./screens/Screen10StartJournaling";
 import Screen11Paywall from "./screens/Screen11Paywall";
@@ -37,8 +37,8 @@ const OnboardingFlow = () => {
     <Screen4StressResponse key="4" onContinue={scrollNext} />,
     <Screen5VoiceSelection key="5" onContinue={scrollNext} />,
     <Screen6LanguageAlignment key="6" onContinue={scrollNext} />,
-    <Screen7WidgetExplanation key="7" onContinue={scrollNext} />,
-    <Screen8SaveVoice key="8" onContinue={scrollNext} />,
+    <Screen7VoiceReveal key="7" onContinue={scrollNext} />,
+    <Screen8WidgetExplanation key="8" onContinue={scrollNext} />,
     <Screen9CreateAccount key="9" onContinue={scrollNext} />,
     <Screen10StartJournaling key="10" onContinue={scrollNext} />,
     <Screen11Paywall key="11" onContinue={handleComplete} />,
