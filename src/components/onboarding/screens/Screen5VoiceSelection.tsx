@@ -11,18 +11,22 @@ const voices = [
   {
     title: "The Philosopher",
     example: "Indecision is a decision to stay stuck. Choose, then adapt.",
+    rotation: "card-rotate-1",
   },
   {
     title: "The Best Friend",
     example: "Hey, you're doing better than you think. Give yourself some credit.",
+    rotation: "card-rotate-2",
   },
   {
     title: "The Realist",
     example: "You already know what to do. Stop waiting for permission.",
+    rotation: "card-rotate-3",
   },
   {
     title: "The Sage",
     example: "The river doesn't rush, yet it shapes the stone.",
+    rotation: "card-rotate-4",
   },
 ];
 
@@ -46,6 +50,7 @@ const Screen5VoiceSelection = ({ onContinue }: ScreenProps) => {
                 example={voice.example}
                 selected={selected === voice.title}
                 onClick={() => setSelected(voice.title)}
+                rotation={voice.rotation}
               />
             ))}
           </div>
