@@ -7,25 +7,21 @@ interface ScreenProps {
   onContinue: () => void;
 }
 
-const voices = [
+const quotes = [
   {
-    title: "The Philosopher",
-    example: "Indecision is a decision to stay stuck. Choose, then adapt.",
+    text: "Indecision costs more than the wrong choice. Decide, then adapt.",
     rotation: "card-rotate-1",
   },
   {
-    title: "The Best Friend",
-    example: "Hey, you're doing better than you think. Give yourself some credit.",
+    text: "You do not have to decide today. Sit with it a little longer.",
     rotation: "card-rotate-2",
   },
   {
-    title: "The Realist",
-    example: "You already know what to do. Stop waiting for permission.",
+    text: "You already know. Stop waiting for permission.",
     rotation: "card-rotate-3",
   },
   {
-    title: "The Sage",
-    example: "The river doesn't rush, yet it shapes the stone.",
+    text: "The path reveals itself only to those who begin walking.",
     rotation: "card-rotate-4",
   },
 ];
@@ -39,18 +35,17 @@ const Screen5VoiceSelection = ({ onContinue }: ScreenProps) => {
 
       <div className="flex-1 screen-padding pt-12 pb-32 overflow-y-auto">
         <div className="animate-fade-in">
-          <h1 className="text-headline mb-2">Choose how Whisper speaks to you</h1>
-          <p className="text-body mb-8">You can always change this later.</p>
+          <h1 className="text-headline mb-2">You've been stuck on a decision for days.</h1>
+          <p className="text-body mb-8">Which response helps most?</p>
 
           <div className="space-y-3">
-            {voices.map((voice) => (
+            {quotes.map((quote) => (
               <VoiceCard
-                key={voice.title}
-                title={voice.title}
-                example={voice.example}
-                selected={selected === voice.title}
-                onClick={() => setSelected(voice.title)}
-                rotation={voice.rotation}
+                key={quote.text}
+                quote={quote.text}
+                selected={selected === quote.text}
+                onClick={() => setSelected(quote.text)}
+                rotation={quote.rotation}
               />
             ))}
           </div>

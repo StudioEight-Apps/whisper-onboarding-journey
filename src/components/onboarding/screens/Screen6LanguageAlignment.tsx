@@ -8,10 +8,10 @@ interface ScreenProps {
 }
 
 const quotes = [
-  { text: "You don't have to fix everything today. You just have to show up.", rotation: "card-rotate-1" },
-  { text: "Clarity comes from action, not thought.", rotation: "card-rotate-2" },
-  { text: "What you resist persists. Let it move through you.", rotation: "card-rotate-3" },
-  { text: "Stop performing your healing. Just heal.", rotation: "card-rotate-4" },
+  { text: "Their opinion is data, not a verdict. Use what is useful.", rotation: "card-rotate-1" },
+  { text: "That pain is real. But their words do not define you.", rotation: "card-rotate-2" },
+  { text: "Not everyone deserves access to your peace.", rotation: "card-rotate-3" },
+  { text: "The arrow only wounds if you hold it inside.", rotation: "card-rotate-4" },
 ];
 
 const Screen6LanguageAlignment = ({ onContinue }: ScreenProps) => {
@@ -23,8 +23,8 @@ const Screen6LanguageAlignment = ({ onContinue }: ScreenProps) => {
 
       <div className="flex-1 screen-padding pt-12 pb-32 overflow-y-auto">
         <div className="animate-fade-in">
-          <h1 className="text-headline mb-2">Which of these lands best?</h1>
-          <p className="text-body mb-8">Pick the one that feels most like something you needed to hear.</p>
+          <h1 className="text-headline mb-2">Someone's words hurt you and you keep replaying them.</h1>
+          <p className="text-body mb-8">Which response feels most true?</p>
 
           <div className="space-y-3">
             {quotes.map((quote) => (

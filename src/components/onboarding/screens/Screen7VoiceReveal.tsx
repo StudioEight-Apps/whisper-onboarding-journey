@@ -5,10 +5,10 @@ interface ScreenProps {
   onContinue: () => void;
 }
 
-const Screen8SaveVoice = ({ onContinue }: ScreenProps) => {
+const Screen7VoiceReveal = ({ onContinue }: ScreenProps) => {
   return (
     <div className="h-full flex flex-col bg-background relative">
-      <ProgressBar progress={82} />
+      <ProgressBar progress={64} />
 
       <div className="flex-1 flex flex-col items-center justify-center screen-padding pb-32">
         <div className="text-center max-w-sm animate-fade-in">
@@ -21,9 +21,14 @@ const Screen8SaveVoice = ({ onContinue }: ScreenProps) => {
           </p>
           
           {/* Voice name */}
-          <h1 className="text-headline-lg mb-8">
+          <h1 className="text-headline-lg mb-4">
             The Best Friend
           </h1>
+          
+          {/* Description */}
+          <p className="text-body mb-8">
+            Warm and grounding. Like a friend who sees you clearly and says what you need to hear.
+          </p>
           
           {/* Gold divider */}
           <div className="flex justify-center mb-6">
@@ -33,24 +38,24 @@ const Screen8SaveVoice = ({ onContinue }: ScreenProps) => {
           {/* Sample whisper card */}
           <div className="bg-card rounded-2xl p-6 mx-4" style={{ boxShadow: 'var(--shadow-card)' }}>
             <p className="text-[15px] leading-[1.5] text-foreground italic text-center">
-              "Hey, you're doing better than you think. Give yourself some credit."
+              "Hey. You are carrying a lot right now. But you do not have to figure it all out today."
             </p>
           </div>
           
           {/* Gold divider */}
-          <div className="flex justify-center mt-6 mb-8">
+          <div className="flex justify-center mt-6 mb-6">
             <div className="gold-divider" />
           </div>
           
-          <p className="text-body text-sm">
-            We've tuned Whisper to match how you think, feel, and process. Now let's make sure you don't lose it.
+          <p className="text-sm text-muted-foreground">
+            You can change this anytime in settings
           </p>
         </div>
       </div>
 
-      <ContinueButton onClick={onContinue} label="Save My Voice" />
+      <ContinueButton onClick={onContinue} />
     </div>
   );
 };
 
-export default Screen8SaveVoice;
+export default Screen7VoiceReveal;
