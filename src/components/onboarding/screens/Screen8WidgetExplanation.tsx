@@ -41,7 +41,7 @@ const Screen8WidgetExplanation = ({
         {/* Text Content */}
         <div className="screen-padding pb-32 animate-slide-up">
           <h1 className="text-headline mb-3">No notifications. 
-No interruptions.</h1>
+ No interruptions.</h1>
           <p className="text-body">
             Whisper waits on your lock screen, ready when you look.
           </p>
