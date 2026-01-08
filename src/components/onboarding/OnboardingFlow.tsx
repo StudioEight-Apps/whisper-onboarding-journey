@@ -1,5 +1,6 @@
 import { useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import Screen0Splash from "./screens/Screen0Splash";
 import Screen1Positioning from "./screens/Screen1Positioning";
 import Screen2CognitiveLoad from "./screens/Screen2CognitiveLoad";
 import Screen3InnerDialogue from "./screens/Screen3InnerDialogue";
@@ -22,7 +23,7 @@ const OnboardingFlow = () => {
   const scrollNext = useCallback(() => {
     if (emblaApi) {
       emblaApi.scrollNext();
-      setCurrentScreen((prev) => Math.min(prev + 1, 10));
+      setCurrentScreen((prev) => Math.min(prev + 1, 11));
     }
   }, [emblaApi]);
 
@@ -31,6 +32,7 @@ const OnboardingFlow = () => {
   };
 
   const screens = [
+    <Screen0Splash key="0" onContinue={scrollNext} />,
     <Screen1Positioning key="1" onContinue={scrollNext} />,
     <Screen2CognitiveLoad key="2" onContinue={scrollNext} />,
     <Screen3InnerDialogue key="3" onContinue={scrollNext} />,

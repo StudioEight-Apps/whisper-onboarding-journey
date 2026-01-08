@@ -1,4 +1,5 @@
 import ProgressBar from "../ProgressBar";
+import whisperLogo from "@/assets/whisper-logo.png";
 
 interface ScreenProps {
   onContinue: () => void;
@@ -9,13 +10,32 @@ const Screen9CreateAccount = ({ onContinue }: ScreenProps) => {
     <div className="h-full flex flex-col bg-background relative">
       <ProgressBar progress={82} />
 
-      <div className="flex-1 screen-padding pt-16 pb-12">
-        <div className="animate-fade-in">
-          <h1 className="text-headline mb-10">Create your account</h1>
+      <div className="flex-1 screen-padding pt-16 pb-12 flex flex-col">
+        <div className="animate-fade-in flex-1 flex flex-col">
+          {/* Logo */}
+          <div className="flex justify-center mb-4">
+            <img 
+              src={whisperLogo} 
+              alt="Whisper" 
+              className="h-10 w-auto"
+            />
+          </div>
+          
+          {/* Subtext */}
+          <p className="text-center text-muted-foreground text-sm mb-12">
+            Save your journal and personalized voice
+          </p>
 
-          <div className="space-y-4">
+          <div className="space-y-4 mt-auto mb-8">
             {/* Apple Button */}
-            <button onClick={onContinue} className="btn-apple">
+            <button 
+              onClick={onContinue} 
+              className="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-2xl text-base font-medium transition-all"
+              style={{ 
+                backgroundColor: "#1A1A1A",
+                color: "#FFFFFF"
+              }}
+            >
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
               </svg>
@@ -23,7 +43,15 @@ const Screen9CreateAccount = ({ onContinue }: ScreenProps) => {
             </button>
 
             {/* Google Button */}
-            <button onClick={onContinue} className="btn-google">
+            <button 
+              onClick={onContinue} 
+              className="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-2xl text-base font-medium transition-all"
+              style={{ 
+                backgroundColor: "#EDE6DC",
+                color: "#2C2C2C",
+                boxShadow: "0 2px 8px rgba(0, 0, 0, 0.06)"
+              }}
+            >
               <svg className="w-5 h-5" viewBox="0 0 24 24">
                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                 <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -35,10 +63,11 @@ const Screen9CreateAccount = ({ onContinue }: ScreenProps) => {
           </div>
 
           {/* Email Link */}
-          <div className="mt-6 text-center">
+          <div className="text-center">
             <button 
               onClick={onContinue}
-              className="text-muted-foreground text-sm underline hover:text-foreground transition-colors"
+              className="text-muted-foreground text-sm hover:text-foreground transition-colors"
+              style={{ textDecoration: "underline", textUnderlineOffset: "3px" }}
             >
               Sign in with Email
             </button>

@@ -12,44 +12,36 @@ const Screen7VoiceReveal = ({ onContinue }: ScreenProps) => {
 
       <div className="flex-1 flex flex-col items-center justify-center screen-padding pb-32">
         <div className="text-center max-w-sm animate-fade-in">
-          {/* Symbol and label */}
-          <div className="mb-3">
-            <span className="text-primary text-lg">✦</span>
-          </div>
-          <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">
+          {/* Small caps label */}
+          <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-6">
             Your Whisper Voice
           </p>
           
-          {/* Voice name */}
+          {/* Headline */}
           <h1 className="text-headline-lg mb-4">
-            The Best Friend
+            We are shaping your journal around you
           </h1>
           
-          {/* Description */}
-          <p className="text-body mb-8">
-            Warm and grounding. Like a friend who sees you clearly and says what you need to hear.
+          {/* Subtext */}
+          <p className="text-body mb-10">
+            Whisper adapts its tone, timing, and language based on how you think and respond.
           </p>
           
-          {/* Gold divider */}
-          <div className="flex justify-center mb-6">
-            <div className="gold-divider" />
-          </div>
-          
           {/* Sample whisper card */}
-          <div className="bg-card rounded-2xl p-6 mx-4" style={{ boxShadow: 'var(--shadow-card)' }}>
-            <p className="text-[15px] leading-[1.5] text-foreground italic text-center">
+          <div 
+            className="rounded-2xl p-6 mx-4"
+            style={{ 
+              backgroundColor: "#EDE6DC",
+              boxShadow: "0 2px 8px rgba(0, 0, 0, 0.06)"
+            }}
+          >
+            <p 
+              className="text-[15px] leading-[1.5] italic text-center"
+              style={{ color: "#2C2C2C" }}
+            >
               "Hey. You are carrying a lot right now. But you do not have to figure it all out today."
             </p>
           </div>
-          
-          {/* Gold divider */}
-          <div className="flex justify-center mt-6 mb-6">
-            <div className="gold-divider" />
-          </div>
-          
-          <p className="text-sm text-muted-foreground">
-            You can change this anytime in settings
-          </p>
         </div>
       </div>
 
