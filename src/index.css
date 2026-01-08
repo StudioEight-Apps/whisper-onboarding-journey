@@ -1,96 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Whisper Design System */
+    --background: 30 43% 97%; /* #FDF8F3 warm cream */
+    --foreground: 0 0% 17%; /* #2C2C2C near black */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 30 26% 93%; /* #F5EDE4 slightly darker cream */
+    --card-foreground: 0 0% 17%;
+    --card-selected: 30 18% 86%; /* #E8DDD1 muted tan */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 30 43% 97%;
+    --popover-foreground: 0 0% 17%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 36 35% 61%; /* #C4A574 muted gold */
+    --primary-foreground: 0 0% 17%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 30 18% 86%; /* #E8DDD1 */
+    --secondary-foreground: 0 0% 17%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 30 18% 86%;
+    --muted-foreground: 0 0% 42%; /* #6B6B6B warm gray */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 36 35% 61%;
+    --accent-foreground: 0 0% 17%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 36 35% 61%;
+    --input: 30 18% 86%;
+    --ring: 36 35% 61%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Custom Whisper tokens */
+    --progress-track: 30 18% 86%;
+    --progress-fill: 36 35% 61%;
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.08);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
+    --background: 30 43% 97%;
+    --foreground: 0 0% 17%;
+    --card: 30 26% 93%;
+    --card-foreground: 0 0% 17%;
+    --card-selected: 30 18% 86%;
+    --popover: 30 43% 97%;
+    --popover-foreground: 0 0% 17%;
+    --primary: 36 35% 61%;
+    --primary-foreground: 0 0% 17%;
+    --secondary: 30 18% 86%;
+    --secondary-foreground: 0 0% 17%;
+    --muted: 30 18% 86%;
+    --muted-foreground: 0 0% 42%;
+    --accent: 36 35% 61%;
+    --accent-foreground: 0 0% 17%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 36 35% 61%;
+    --input: 30 18% 86%;
+    --ring: 36 35% 61%;
   }
 }
 
@@ -100,6 +75,95 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .font-serif-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-sans-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .text-headline {
+    @apply font-serif-display text-[28px] leading-[1.3] font-medium text-foreground;
+  }
+
+  .text-headline-lg {
+    @apply font-serif-display text-[32px] leading-[1.3] font-medium text-foreground;
+  }
+
+  .text-body {
+    @apply font-sans-body text-[16px] leading-[1.6] font-normal text-muted-foreground;
+  }
+
+  .text-body-lg {
+    @apply font-sans-body text-[17px] leading-[1.6] font-normal text-muted-foreground;
+  }
+
+  .text-card {
+    @apply font-sans-body text-[15px] leading-[1.5] font-normal text-foreground;
+  }
+
+  .screen-padding {
+    @apply px-6;
+  }
+
+  .card-whisper {
+    @apply bg-card rounded-2xl p-5 transition-all duration-200;
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-whisper-selected {
+    @apply bg-card-selected border border-primary;
+  }
+
+  .card-voice {
+    @apply bg-card rounded-2xl p-5 min-h-[100px] transition-all duration-200;
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-voice-selected {
+    @apply bg-card-selected;
+    border-left: 3px solid hsl(var(--primary));
+  }
+
+  .card-quote {
+    @apply bg-card rounded-2xl p-5 min-h-[80px] flex items-center justify-center text-center transition-all duration-200;
+    box-shadow: var(--shadow-card);
+  }
+
+  .btn-primary {
+    @apply w-full h-14 bg-primary text-primary-foreground rounded-full font-sans-body text-base font-medium transition-all duration-200 hover:opacity-90 active:scale-[0.98];
+  }
+
+  .btn-apple {
+    @apply w-full h-14 bg-foreground text-background rounded-xl font-sans-body text-base font-medium flex items-center justify-center gap-3 transition-all duration-200 hover:opacity-90;
+  }
+
+  .btn-google {
+    @apply w-full h-14 bg-background text-foreground rounded-xl font-sans-body text-base font-medium flex items-center justify-center gap-3 border border-secondary transition-all duration-200 hover:bg-secondary/50;
+  }
+
+  .progress-bar {
+    @apply w-full h-[3px] bg-secondary;
+  }
+
+  .progress-fill {
+    @apply h-full bg-primary transition-all duration-500 ease-out;
+  }
+}
+
+@layer utilities {
+  .card-selected-bg {
+    background-color: hsl(var(--card-selected));
   }
 }
