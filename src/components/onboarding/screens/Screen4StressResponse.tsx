@@ -33,7 +33,6 @@ const Screen4StressResponse = ({ onContinue }: ScreenProps) => {
                 text={option}
                 selected={selected === option}
                 onClick={() => setSelected(option)}
-                showCheckmark={false}
               />
             ))}
           </div>

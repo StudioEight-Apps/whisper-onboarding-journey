@@ -33,7 +33,6 @@ const Screen3InnerDialogue = ({ onContinue }: ScreenProps) => {
                 text={option}
                 selected={selected === option}
                 onClick={() => setSelected(option)}
-                showCheckmark={false}
               />
             ))}
           </div>

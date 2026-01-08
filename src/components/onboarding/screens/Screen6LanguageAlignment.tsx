@@ -8,10 +8,10 @@ interface ScreenProps {
 }
 
 const quotes = [
-  "You don't have to fix everything today. You just have to show up.",
-  "Clarity comes from action, not thought.",
-  "What you resist persists. Let it move through you.",
-  "Stop performing your healing. Just heal.",
+  { text: "You don't have to fix everything today. You just have to show up.", rotation: "card-rotate-1" },
+  { text: "Clarity comes from action, not thought.", rotation: "card-rotate-2" },
+  { text: "What you resist persists. Let it move through you.", rotation: "card-rotate-3" },
+  { text: "Stop performing your healing. Just heal.", rotation: "card-rotate-4" },
 ];
 
 const Screen6LanguageAlignment = ({ onContinue }: ScreenProps) => {
@@ -29,10 +29,11 @@ const Screen6LanguageAlignment = ({ onContinue }: ScreenProps) => {
           <div className="space-y-3">
             {quotes.map((quote) => (
               <QuoteCard
-                key={quote}
-                quote={quote}
-                selected={selected === quote}
-                onClick={() => setSelected(quote)}
+                key={quote.text}
+                quote={quote.text}
+                selected={selected === quote.text}
+                onClick={() => setSelected(quote.text)}
+                rotation={quote.rotation}
               />
             ))}
           </div>
