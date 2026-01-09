@@ -1,4 +1,3 @@
-import ProgressBar from "../ProgressBar";
 import whisperLogo from "@/assets/whisper-logo.png";
 
 interface ScreenProps {
@@ -7,30 +6,32 @@ interface ScreenProps {
 
 const Screen9CreateAccount = ({ onContinue }: ScreenProps) => {
   return (
-    <div className="h-full flex flex-col bg-background relative">
-      <ProgressBar progress={82} />
-
-      <div className="flex-1 screen-padding pt-16 pb-12 flex flex-col">
+    <div className="h-full flex flex-col bg-background">
+      <div className="flex-1 screen-padding pt-24 pb-10 flex flex-col">
         <div className="animate-fade-in flex-1 flex flex-col">
-          {/* Logo */}
-          <div className="flex justify-center mb-4">
+          {/* Logo with generous breathing room */}
+          <div className="flex justify-center mb-3">
             <img 
               src={whisperLogo} 
               alt="Whisper" 
-              className="h-10 w-auto"
+              className="h-9 w-auto"
             />
           </div>
           
-          {/* Subtext */}
-          <p className="text-center text-muted-foreground text-sm mb-12">
-            Save your journal and personalized voice
+          {/* Helper text - lighter, smaller */}
+          <p className="text-center text-muted-foreground/70 text-sm font-light tracking-wide">
+            Your journal and personalized voice will be saved.
           </p>
 
-          <div className="space-y-4 mt-auto mb-8">
-            {/* Apple Button */}
+          {/* Spacer to push buttons to lower half */}
+          <div className="flex-1 min-h-[120px]" />
+
+          {/* Button stack */}
+          <div className="space-y-3 mb-4">
+            {/* Apple Button - Primary, strong visual weight */}
             <button 
               onClick={onContinue} 
-              className="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-2xl text-base font-medium transition-all"
+              className="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-xl text-base font-medium transition-all active:scale-[0.98]"
               style={{ 
                 backgroundColor: "#1A1A1A",
                 color: "#FFFFFF"
@@ -42,14 +43,13 @@ const Screen9CreateAccount = ({ onContinue }: ScreenProps) => {
               Continue with Apple
             </button>
 
-            {/* Google Button */}
+            {/* Google Button - Secondary, softer emphasis */}
             <button 
               onClick={onContinue} 
-              className="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-2xl text-base font-medium transition-all"
+              className="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-xl text-base font-medium transition-all active:scale-[0.98]"
               style={{ 
-                backgroundColor: "#EDE6DC",
-                color: "#2C2C2C",
-                boxShadow: "0 2px 8px rgba(0, 0, 0, 0.06)"
+                backgroundColor: "hsl(var(--card))",
+                color: "hsl(var(--foreground))"
               }}
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -62,14 +62,13 @@ const Screen9CreateAccount = ({ onContinue }: ScreenProps) => {
             </button>
           </div>
 
-          {/* Email Link */}
-          <div className="text-center">
+          {/* Email link - lighter, optional feel */}
+          <div className="text-center pb-4">
             <button 
               onClick={onContinue}
-              className="text-muted-foreground text-sm hover:text-foreground transition-colors"
-              style={{ textDecoration: "underline", textUnderlineOffset: "3px" }}
+              className="text-muted-foreground/60 text-sm font-light hover:text-muted-foreground transition-colors"
             >
-              Sign in with Email
+              Sign in with email
             </button>
           </div>
         </div>
