@@ -7,31 +7,31 @@ interface ScreenProps {
 const Screen9CreateAccount = ({ onContinue }: ScreenProps) => {
   return (
     <div className="h-full flex flex-col bg-background">
-      <div className="flex-1 screen-padding pt-24 pb-10 flex flex-col">
+      <div className="flex-1 screen-padding pt-20 pb-8 flex flex-col">
         <div className="animate-fade-in flex-1 flex flex-col">
           {/* Logo with generous breathing room */}
-          <div className="flex justify-center mb-3">
+          <div className="flex justify-center mb-4">
             <img 
               src={whisperLogo} 
               alt="Whisper" 
-              className="h-9 w-auto"
+              className="h-10 w-auto"
             />
           </div>
           
-          {/* Helper text - lighter, smaller */}
-          <p className="text-center text-muted-foreground/70 text-sm font-light tracking-wide">
-            Your journal and personalized voice will be saved.
+          {/* Tagline */}
+          <p className="text-center text-foreground/70 text-base font-light">
+            A journal that responds to you.
           </p>
 
           {/* Spacer to push buttons to lower half */}
-          <div className="flex-1 min-h-[120px]" />
+          <div className="flex-1 min-h-[100px]" />
 
           {/* Button stack */}
-          <div className="space-y-3 mb-4">
+          <div className="space-y-3 mb-5">
             {/* Apple Button - Primary, strong visual weight */}
             <button 
               onClick={onContinue} 
-              className="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-xl text-base font-medium transition-all active:scale-[0.98]"
+              className="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-2xl text-base font-medium transition-all active:scale-[0.98]"
               style={{ 
                 backgroundColor: "#1A1A1A",
                 color: "#FFFFFF"
@@ -46,7 +46,7 @@ const Screen9CreateAccount = ({ onContinue }: ScreenProps) => {
             {/* Google Button - Secondary, softer emphasis */}
             <button 
               onClick={onContinue} 
-              className="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-xl text-base font-medium transition-all active:scale-[0.98]"
+              className="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-2xl text-base font-medium transition-all active:scale-[0.98]"
               style={{ 
                 backgroundColor: "hsl(var(--card))",
                 color: "hsl(var(--foreground))"
@@ -62,13 +62,26 @@ const Screen9CreateAccount = ({ onContinue }: ScreenProps) => {
             </button>
           </div>
 
-          {/* Email link - lighter, optional feel */}
-          <div className="text-center pb-4">
+          {/* Email link - underlined */}
+          <div className="text-center mb-8">
             <button 
               onClick={onContinue}
-              className="text-muted-foreground/60 text-sm font-light hover:text-muted-foreground transition-colors"
+              className="text-foreground/60 text-sm font-light hover:text-foreground transition-colors underline underline-offset-2"
             >
               Sign in with email
+            </button>
+          </div>
+
+          {/* Already have account */}
+          <div className="text-center">
+            <span className="text-foreground/50 text-sm font-light">
+              Already have an account?{" "}
+            </span>
+            <button 
+              onClick={onContinue}
+              className="text-foreground/70 text-sm font-light underline underline-offset-2 hover:text-foreground transition-colors"
+            >
+              Log in
             </button>
           </div>
         </div>
