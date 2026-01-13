@@ -25,27 +25,52 @@ const Screen7VoiceReveal = ({ onContinue }: ScreenProps) => {
           </p>
         </div>
 
-        {/* Widget Card */}
+        {/* Premium Widget Card - Lock Screen Preview */}
         <div 
-          className="rounded-2xl px-6 py-5 max-w-[300px] w-full animate-fade-in"
+          className="rounded-3xl px-8 py-7 max-w-[320px] w-full animate-fade-in relative overflow-hidden"
           style={{ 
-            backgroundColor: "rgba(255, 255, 255, 0.85)",
-            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04)"
+            background: "linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 239, 231, 0.9) 100%)",
+            backdropFilter: "blur(20px)",
+            WebkitBackdropFilter: "blur(20px)",
+            boxShadow: `
+              0 0 0 1px rgba(196, 165, 116, 0.15),
+              0 4px 16px rgba(196, 165, 116, 0.12),
+              0 12px 40px rgba(0, 0, 0, 0.08),
+              0 24px 60px rgba(196, 165, 116, 0.08),
+              inset 0 1px 0 rgba(255, 255, 255, 0.8)
+            `
           }}
         >
-          {/* Whisper label - Now at top */}
-          <p 
-            className="text-[10px] tracking-[0.15em] uppercase text-center mb-3"
-            style={{ color: "#C4A574" }}
-          >
-            Whisper
-          </p>
-          <p 
-            className="text-[15px] leading-[1.6] italic text-center"
-            style={{ color: "#2C2C2C" }}
-          >
-            "A year from now, everything you're stressing about won't mean a thing."
-          </p>
+          {/* Subtle inner glow overlay */}
+          <div 
+            className="absolute inset-0 rounded-3xl pointer-events-none"
+            style={{
+              background: "radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.6) 0%, transparent 60%)"
+            }}
+          />
+          
+          {/* Content */}
+          <div className="relative z-10">
+            {/* Whisper label - Refined */}
+            <p 
+              className="text-[11px] tracking-[0.2em] uppercase text-center mb-4 font-medium"
+              style={{ color: "#C4A574" }}
+            >
+              Whisper
+            </p>
+            
+            {/* Quote - Elegant typography */}
+            <p 
+              className="font-serif text-[17px] leading-[1.7] text-center font-normal"
+              style={{ 
+                color: "#2C2C2C",
+                fontStyle: "italic",
+                letterSpacing: "0.01em"
+              }}
+            >
+              "A year from now, everything you're stressing about won't mean a thing."
+            </p>
+          </div>
         </div>
       </div>
 
