@@ -11,7 +11,7 @@ const Screen7VoiceReveal = ({ onContinue }: ScreenProps) => {
       <ProgressBar progress={64} />
 
       {/* Centered content system */}
-      <div className="flex-1 flex flex-col items-center justify-center px-6 pb-24">
+      <div className="flex-1 flex flex-col items-center justify-center px-6 pb-24 -mt-16">
         {/* Text Content - Positioned closer to widget */}
         <div className="text-center animate-fade-in mb-8">
           {/* Headline */}
