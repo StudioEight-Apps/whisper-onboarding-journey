@@ -36,12 +36,12 @@ const Screen7VoiceReveal = ({ onContinue }: ScreenProps) => {
       });
     }, interval);
 
-    // Cycle through status messages
+    // Cycle through status messages - slower pace
     let messageIndex = 0;
     const messageTimer = setInterval(() => {
       messageIndex = (messageIndex + 1) % statusMessages.length;
       setStatusText(statusMessages[messageIndex]);
-    }, 1000);
+    }, 1500);
 
     return () => {
       clearInterval(progressTimer);
@@ -65,14 +65,18 @@ const Screen7VoiceReveal = ({ onContinue }: ScreenProps) => {
           {statusText}
         </p>
 
-        {/* Minimal Progress Bar - Understated */}
-        <div className="w-full max-w-[200px]">
-          <div className="h-[2px] bg-muted/50 overflow-hidden">
+        {/* Progress Bar - Prominent but refined */}
+        <div className="w-[75%] max-w-[320px]">
+          <div className="h-[7px] bg-muted rounded-full overflow-hidden">
             <div 
-              className="h-full bg-foreground transition-all duration-100 ease-out"
-              style={{ width: `${progress}%` }}
+              className="h-full rounded-full transition-all duration-100 ease-out"
+              style={{ width: `${progress}%`, backgroundColor: "hsl(var(--foreground) / 0.85)" }}
             />
           </div>
+          {/* Percent label */}
+          <p className="text-muted-foreground text-[13px] text-center mt-3">
+            {Math.round(progress)}%
+          </p>
         </div>
       </div>
 
