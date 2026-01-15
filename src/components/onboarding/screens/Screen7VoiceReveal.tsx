@@ -53,37 +53,27 @@ const Screen7VoiceReveal = ({ onContinue }: ScreenProps) => {
     <div className="h-full flex flex-col bg-background relative">
       <ProgressBar progress={64} />
 
-      {/* Centered content system - vertically centered like Cal AI */}
-      <div className="flex-1 flex flex-col items-center justify-center px-6 pb-24">
-        {/* Percentage Display */}
-        <div className="text-center animate-fade-in mb-4">
-          <span className="font-serif text-[72px] leading-none font-medium text-foreground">
-            {Math.round(progress)}%
-          </span>
-        </div>
-
-        {/* Headline */}
-        <h1 className="font-serif text-[28px] leading-[1.2] font-medium text-foreground text-center mb-10 animate-fade-in">
-          We're shaping how your journal responds.
+      {/* Centered content system - quiet and intentional */}
+      <div className="flex-1 flex flex-col items-center justify-center px-8 pb-24">
+        {/* Headline - Primary focus */}
+        <h1 className="font-serif text-[32px] leading-[1.3] font-medium text-foreground text-center mb-6 animate-fade-in">
+          Shaping how your<br />journal responds
         </h1>
 
-        {/* Animated Progress Bar */}
-        <div className="w-full max-w-[300px] mb-4">
-          <div className="h-2 bg-muted rounded-full overflow-hidden">
+        {/* Status Text - Secondary emphasis */}
+        <p className="text-muted-foreground text-[15px] text-center mb-12 animate-fade-in">
+          {statusText}
+        </p>
+
+        {/* Minimal Progress Bar - Understated */}
+        <div className="w-full max-w-[200px]">
+          <div className="h-[2px] bg-muted/50 overflow-hidden">
             <div 
-              className="h-full rounded-full transition-all duration-100 ease-out"
-              style={{ 
-                width: `${progress}%`,
-                background: "linear-gradient(90deg, #E8B4B8 0%, #C4A574 50%, #A8C5D9 100%)"
-              }}
+              className="h-full bg-foreground transition-all duration-100 ease-out"
+              style={{ width: `${progress}%` }}
             />
           </div>
         </div>
-
-        {/* Status Text */}
-        <p className="text-muted-foreground text-[14px] animate-fade-in">
-          {statusText}
-        </p>
       </div>
 
       {/* Continue Button with delayed activation */}
